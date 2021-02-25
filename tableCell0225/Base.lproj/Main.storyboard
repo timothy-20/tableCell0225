@@ -20,17 +20,25 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="94" id="tUb-Fh-sgb">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="94"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="51" id="tUb-Fh-sgb">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="51"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tUb-Fh-sgb" id="fEs-Ak-aVX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oES-ke-Nxb">
-                                                    <rect key="frame" x="20" y="7" width="88" height="79"/>
+                                                    <rect key="frame" x="20" y="11" width="85" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ax-1i-XdS">
+                                                    <rect key="frame" x="329" y="6" width="46" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="goNextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKd-G3-CL5"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -49,11 +57,28 @@
                     <navigationItem key="navigationItem" title="Main" id="jYy-tZ-p9t"/>
                     <connections>
                         <outlet property="myTableView" destination="y2D-g6-YgZ" id="123-5o-oVw"/>
+                        <segue destination="Y7Y-of-IFg" kind="show" identifier="segue1" id="TZz-Qd-QY8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1002.8985507246377" y="109.82142857142857"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hcP-Xb-iwT">
+            <objects>
+                <viewController id="Y7Y-of-IFg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QlZ-Vz-whI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4XT-WO-0c2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eh1-fF-ToW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zUq-DA-l2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="se1-dl-YDJ">

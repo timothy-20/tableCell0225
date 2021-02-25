@@ -13,6 +13,7 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
+- (IBAction)goNextButton:(id)sender;
 
 @end
 
@@ -25,6 +26,7 @@
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     //의문 중에 있었던 UITableViewDelegate의 정체. 골자는 위의 2줄.
+    
 }
 
 -(void)arraySetUp
@@ -44,6 +46,10 @@
     
     cell.imageView.image = [UIImage imageNamed: imageNameArray[indexPath.row]];
     cell.textLabel.text = imageNameArray[indexPath.row];
+    
+    UIButton *nextButton;
+    nextButton = (UIButton *)[cell viewWithTag: 1];
+    nextButton.tintColor = [UIColor blueColor];
         
     return cell;
 }
@@ -56,4 +62,7 @@
     }
 }
 
+- (IBAction)goNextButton:(id)sender {
+    [self performSegueWithIdentifier:@"segue1" sender:nil];
+}
 @end
