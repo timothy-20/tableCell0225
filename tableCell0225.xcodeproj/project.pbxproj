@@ -16,6 +16,9 @@
 		9942141725E75E0D00472733 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942141625E75E0D00472733 /* main.m */; };
 		9942142125E75E0D00472733 /* tableCell0225Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942142025E75E0D00472733 /* tableCell0225Tests.m */; };
 		9942142C25E75E0D00472733 /* tableCell0225UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9942142B25E75E0D00472733 /* tableCell0225UITests.m */; };
+		9942144625E793DE00472733 /* Engineer.png in Resources */ = {isa = PBXBuildFile; fileRef = 9942144425E793DE00472733 /* Engineer.png */; };
+		9942144725E793DE00472733 /* Huntress.png in Resources */ = {isa = PBXBuildFile; fileRef = 9942144525E793DE00472733 /* Huntress.png */; };
+		9942144925E793E800472733 /* Commando.png in Resources */ = {isa = PBXBuildFile; fileRef = 9942144825E793E800472733 /* Commando.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		9942142725E75E0D00472733 /* tableCell0225UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableCell0225UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9942142B25E75E0D00472733 /* tableCell0225UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tableCell0225UITests.m; sourceTree = "<group>"; };
 		9942142D25E75E0D00472733 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9942144425E793DE00472733 /* Engineer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Engineer.png; sourceTree = SOURCE_ROOT; };
+		9942144525E793DE00472733 /* Huntress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Huntress.png; sourceTree = SOURCE_ROOT; };
+		9942144825E793E800472733 /* Commando.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Commando.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 		9942140325E75E0A00472733 /* tableCell0225 */ = {
 			isa = PBXGroup;
 			children = (
+				9942144825E793E800472733 /* Commando.png */,
+				9942144425E793DE00472733 /* Engineer.png */,
+				9942144525E793DE00472733 /* Huntress.png */,
 				9942140425E75E0A00472733 /* AppDelegate.h */,
 				9942140525E75E0A00472733 /* AppDelegate.m */,
 				9942140725E75E0A00472733 /* SceneDelegate.h */,
@@ -240,8 +249,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9942141425E75E0C00472733 /* LaunchScreen.storyboard in Resources */,
+				9942144725E793DE00472733 /* Huntress.png in Resources */,
 				9942141125E75E0C00472733 /* Assets.xcassets in Resources */,
+				9942144625E793DE00472733 /* Engineer.png in Resources */,
 				9942140F25E75E0A00472733 /* Main.storyboard in Resources */,
+				9942144925E793E800472733 /* Commando.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

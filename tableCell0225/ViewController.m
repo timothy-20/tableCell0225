@@ -8,6 +8,10 @@
 #import "ViewController.h"
 
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
+{
+    NSMutableArray *imageNameArray;
+}
+
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
@@ -17,35 +21,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) style:UITableViewStylePlain];
-    
+    [self arraySetUp];
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
-    [self.view addSubview:self.myTableView];
-    //의문 중에 있었던 UITableViewDelegate의 정체. 골자는 위의 3줄.
+    //의문 중에 있었던 UITableViewDelegate의 정체. 골자는 위의 2줄.
+}
+
+-(void)arraySetUp
+{
+    imageNameArray = [NSMutableArray arrayWithArray: @[@"Commando", @"Engineer", @"Huntress"]];
+    //이미지 Array는 이런식으로 값을 집어넣나 보다. 해당 방식은 C언어와 근접해 있는 듯.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return imageNameArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
     
-    cell.textLabel.text = @"Hello World";
+    cell.imageView.image = [UIImage imageNamed: imageNameArray[indexPath.row]];
+    cell.textLabel.text = imageNameArray[indexPath.row];
         
     return cell;
 }
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-}
-
 
 @end
