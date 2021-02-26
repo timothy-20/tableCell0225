@@ -44,6 +44,10 @@
     
     cell.imageView.image = [UIImage imageNamed: imageNameArray[indexPath.row]];
     cell.textLabel.text = imageNameArray[indexPath.row];
+    
+    cell.contentView.layer.cornerRadius = 5;
+    cell.contentView.layer.borderWidth = 1;
+    cell.contentView.layer.borderColor = [UIColor blackColor].CGColor;
         
     return cell;
 }
@@ -55,5 +59,27 @@
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+
+- (IBAction)editTapped:(id)sender {
+    [_myTableView setEditing: !_myTableView.editing];
+}
+
+- (IBAction)refreshTapped:(id)sender {
+    [_myTableView reloadData];
+}
+//
+//-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    if(self = [super initWithNibName:nibNameOrNil bundle:nibNameOrNil]){
+//        UIBarButtonItem *add = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
+//    }
+//    return self;
+//}
+//
+//-(void)add
+//{
+//    NSLog(@"add item");
+//}
+
 
 @end
